@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 export const Wrapper = styled.div`
     width: 100%;
     max-height: calc(100vh - 90px);
-    background-image: linear-gradient(rgba(0,0,0,.6) 0,#121212 100%);
+    background-color: white;
     user-select: none;
     overflow-y: auto;
 `;
@@ -14,8 +14,7 @@ export const Container = styled.div`
     h3 {
         font-size: 32px;
         font-weight: 700;
-        color: rgba(255, 255, 255, 0.95);
-        text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+        color: black;
     }
 `;
 

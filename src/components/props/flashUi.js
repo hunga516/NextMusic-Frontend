@@ -8,16 +8,16 @@ const faded = keyframes`
 `;
 
 const Container = styled.div`
+    border: 0.5px solid black;
     padding: 11px 42px;
-    background: rgba(63,88,203, 1);
+    background: white;
     position: fixed;
     z-index: 100;
     bottom: 82px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-    left: 50%;
+    left: 56.9%;
     transform: translateX(-50%);
-    color: rgba(255, 255, 255, 0.89);
-    border-radius: 10px;
+    color: black;
+    border-radius: 5px;
     animation: ${props => props.popup && css`${faded} ease-in 1s`};
 `;
 

@@ -95,7 +95,7 @@ export const Container = styled.div`
                             line-height: 16px;
                             font-size: 16px;
                             font-weight: 600;
-                            color: rgba(255, 255, 255, 0.9);
+                            color: black;
                         }
                         span {
                             font-weight: 500;
@@ -103,6 +103,12 @@ export const Container = styled.div`
                         }
                     }
                 }
+            }
+            .grid:nth-child(1){
+                 background-color: rgba(60,60,67,.03);
+            }
+            .grid:nth-child(3){
+                background-color: rgba(60,60,67,.03);
             }
     }
 `;

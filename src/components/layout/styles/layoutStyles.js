@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
 
 export const MainView = styled.div`
     position: relative;
-    background-image: linear-gradient(rgba(0,0,0,.75) 0,#121212 100%);
+    background-color: white;
     height: 100%;
     width: 100%;
     grid-area: main-view;

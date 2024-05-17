@@ -5,7 +5,6 @@ import { Wrapper } from "./styles/controlStyles"
 export default function MobileControls() {
     return (
         <Wrapper>
-            Hello
         </Wrapper>
     )
 }

@@ -14,7 +14,6 @@ export const SongPoster = styled.div`
     height: 56px;
     margin-right: 16px;
     border-radius: 2px;
-    box-shadow: 8px 2px 14px rgba(0, 0, 0, 0.5);
     img {
         width: 100%;
         height: 100%;
@@ -37,7 +36,7 @@ export const SongMeta = styled.div`
         overflow: hidden;
         text-overflow: ellipsis;
         a {
-            color: rgba(255, 255, 255, 0.9);
+            color: black;
             font-size: 14px;
             font-weight: 500;
         }

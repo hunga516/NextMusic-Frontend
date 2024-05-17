@@ -1,10 +1,12 @@
 import styled from "styled-components/macro";
 
-export const Wrapper = styled.nav`
+export const Wrapper = styled.nav`  
+    background-url: url(https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2017/04/blue/16903216-1-eng-GB/Blue_pillars.jpg);
+    border-right: 1px solid rgba(168, 168, 168, 0.4);
     grid-area: nav-bar;
     width: calc(156px + 5.44vw);
-    height: 100%;
-    background-color: rgba(0, 0, 0, 1);
+    height: 109%;
+    background-color: rgba(60,60,67,.03);
     display: flex;
     flex-direction: column;
     @media (max-width: 1024px) {
@@ -43,15 +45,14 @@ export const NavItems = styled.ul`
     li {
         margin-bottom: 4px;
         .active {
-            color: rgba(255, 255, 255, 0.9);
             .nav_items {
-                background-color: #282828;
+                background-color: rgba(176, 175, 175, 0.8);
             }
         }
         a {
             transition: all 0.3s;
             font-weight: 500;
-            color: rgba(179, 179, 179, 0.85);
+            color: black;
             text-decoration: none;
             span {
                 white-space: nowrap;
@@ -69,7 +70,7 @@ export const NavItems = styled.ul`
                 }
             }
             &:hover {
-                color: rgba(255, 255, 255, 0.9);
+                color: black 0.8;
             }
         }
     }
@@ -89,7 +90,7 @@ export const NavRoot = styled.div`
 const buttons = `
     button {
         transition: all 0.25s;
-        color: rgba(179, 179, 179, 0.8);
+        color: black;
         width: 100%;
         height: 38px;
         display: flex;
@@ -132,7 +133,7 @@ export const LikedSongs = styled.div`
     a {
         display: flex;
         text-decoration: none;
-        color: rgba(179, 179, 179, 0.8);
+        color: black;
     }
     ${buttons};
     margin-bottom: 14px;
@@ -147,11 +148,9 @@ export const LikedSongs = styled.div`
             height: 1px;
             bottom: -9px;
             width: 88%;
-            background: rgba(179, 179, 179, 0.4);
     }
     .rect {
             transition: all 0.3s;
-            background: linear-gradient(135deg, rgba(69, 10, 245, 0.75), rgba(196, 239, 217, 0.75));
             width: 23px;
             height: 23px;
             display: flex;
@@ -162,10 +161,9 @@ export const LikedSongs = styled.div`
         }
     &:hover {
         .rect {
-                background: linear-gradient(135deg, rgba(69, 10, 245, 0.92), rgba(196, 239, 217, 0.92)) !important;
                 svg {
                     .heart {
-                        fill: rgba(255, 255, 255, 0.9) !important;
+                        fill: black !important;
                     }
                 }
             }
@@ -198,7 +196,7 @@ export const UserPlaylists = styled.div`
         padding: 6px 0;
         .active {
             span {
-                color: rgba(255, 255, 255, 0.9)
+                color: black;
             }
         }
         a {
@@ -210,14 +208,14 @@ export const UserPlaylists = styled.div`
                 text-overflow: ellipsis;
                 font-size: 14.5px;
                 padding-right: 2px;
-                color: rgba(179, 179, 179, 0.85);
+                color: black;
                 transition: all 0.25s;
                 font-weight: 500;
             }
         }
         &:hover {
             span {
-                color: rgba(255, 255, 255, 0.95);
+                color: rgba(44,191,255,1);
             }
         }
     }

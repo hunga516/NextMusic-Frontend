@@ -56,9 +56,8 @@ export default function SaveToLibrary({ size = 36, id, type = 'playlist', liked 
                 const response = await requestFunc();
                 if (response.status === 200) {
                     setSaved(true);
-                    setFlash('Added to your Liked Songs');
+                    setFlash('Bài hát đã được lưu vào thư viện');
                 } else {
-                    setFlash('Opps, something went wrong!');
                 }
             } catch (error) {
                 console.log(error);
@@ -76,9 +75,8 @@ export default function SaveToLibrary({ size = 36, id, type = 'playlist', liked 
                 const response = await requestFunc();
                 if (response.status === 200) {
                     setSaved(false);
-                    setFlash('Removed from your Liked Songs');
+                    setFlash('Đã xoá khỏi danh sách yêu thích');
                 } else {
-                    setFlash('Opps, something went wrong!');
                 }
             } catch (error) {
                 console.log(error);

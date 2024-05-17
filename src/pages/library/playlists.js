@@ -21,16 +21,16 @@ export default function CollectionPlaylists() {
             <Container>
                 <LibraryNav>
                     <NavLink to="/collection/playlists" activeClassName="active">
-                        Playlists
+                        Danh sách phát
                     </NavLink>
                     <NavLink to="/collection/artists" activeClassName="active">
-                        Artists
+                        Nghệ sĩ
                     </NavLink>
                     <NavLink to="/collection/albums" activeClassName="active">
                         Albums
                     </NavLink>
                 </LibraryNav>
-                <h3>Playlists</h3>
+                <h3>Danh sách phát</h3>
                 <FrameWrapper ref={playlistsRef} style={{ marginTop: "12px", gridTemplateColumns: dimensions.width < 1206 ? `repeat(${Math.ceil(dimensions.width / 220)}, minmax(0, 1fr)` : `repeat(6, minmax(0, 1fr)` }}>
                     {items && items !== undefined && items.map((playlist, index) => (
                         <Frame
@@ -38,7 +38,6 @@ export default function CollectionPlaylists() {
                             type="playlist"
                             id={playlist.id}
                             cover={playlist.images[0]?.url}
-                            name={playlist.name}
                             description={playlist.description ? playlist.description : `by ${playlist.owner.display_name}`}
                             uri={playlist.uri}
                         />

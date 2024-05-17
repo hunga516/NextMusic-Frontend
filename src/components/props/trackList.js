@@ -36,7 +36,6 @@ export default function TrackList({ songs, uri, type = "playlist" }) {
             if (response.status === 204) {
                 setTimeout(() => updatePlayer(), 200);
             } else {
-                setFlash('Opps, something went wrong!');
             }
         };
         requestMusic();

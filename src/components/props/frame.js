@@ -25,7 +25,6 @@ export default function Frame({ children, type, id, name, uri, cover, descriptio
             if (response.status === 204) {
                 setTimeout(() => updatePlayer(), 200);
             } else {
-                setFlash('Opps, something went wrong!');
             }
         };
         requestMusic();
@@ -46,7 +45,6 @@ export default function Frame({ children, type, id, name, uri, cover, descriptio
                 </div>
                 <div className="meta">
                     <h3>{name}</h3>
-                    {description && <p>{(description)}</p>}
                 </div>
             </Link>
         </Container>

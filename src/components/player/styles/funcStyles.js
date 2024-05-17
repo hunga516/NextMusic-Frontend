@@ -47,13 +47,12 @@ export const DeviceOptions = styled.div`
     z-index: 20;
     bottom: 100%;
     right: 50%;
-    background: rgba(40, 40, 40, 1);
-    box-shadow: 0 4px 12px 4px rgba(0, 0, 0, 0.5);
+    background: rgba(226,225,225,1);
     .text {
         margin-bottom: 24px;
         white-space: nowrap;
         h3 {
-            color: rgba(255, 255, 255, 1);
+            color: black;
             font-size: 20px;
             letter-spacing: 0.3px;
         }
@@ -71,7 +70,7 @@ export const DeviceOptions = styled.div`
         flex-direction: column;
         h3 {
             font-size: 15px;
-            color: rgba(255, 255, 255, 0.9);
+            color: black;
             font-weight: 400;
         }
         .device_item {
@@ -81,23 +80,24 @@ export const DeviceOptions = styled.div`
             background: transparent;
             border-radius: 4px;
             &:hover {
-                background: rgba(179, 179, 179, 0.2);
+                background: rgba(176,175,175,0.8);
             }
             .icon {
                 margin-right: 12px;
                 svg {
                     width: 32px;
                     height: 32px;
-                    stroke: rgba(255, 255, 255, 0.9);
+                    stroke: black;
                 }
             }
             .informations {
                 display: flex;
                 flex-direction: column;
                 .name {
+                    color:black;
                     align-self: flex-start;
                     span {
-                        color: rgba(255, 255, 255, 0.9);
+                        color: black;
                         font-size: 15px;
                         font-weight: 600;
                         white-space: nowrap;
@@ -112,7 +112,7 @@ export const DeviceOptions = styled.div`
                         margin-right: 4px;
                     }
                     span {
-                       color: rgba(179, 179, 179, 0.8);
+                       color: black;
                        font-size: 12px;
                        font-weight: 600;
                        white-space: nowrap;

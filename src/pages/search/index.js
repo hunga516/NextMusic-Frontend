@@ -25,7 +25,7 @@ export default function SearchPage() {
                     </div>
                     <input
                         type="text"
-                        placeholder="Artists, songs, or podcasts"
+                        placeholder="Nhập ca sĩ, tên bài hát hoặc album"
                         spellCheck="false"
                         value={value}
                         onChange={handleChange}
@@ -34,13 +34,13 @@ export default function SearchPage() {
                 {value.length !== 0 ? (
                     <>
                         <ResultContainer
-                            title="Songs"
+                            title="Bài hát"
                             value={value}
                             type="track"
                             limit="4"
                         />
                         <ResultContainer
-                            title="Artists"
+                            title="Nghệ sĩ"
                             value={value}
                             type="artist"
                         />
@@ -50,7 +50,7 @@ export default function SearchPage() {
                             type="album"
                         />
                         <ResultContainer
-                            title="Playlists"
+                            title="Danh sách phát"
                             value={value}
                             type="playlist"
                         />

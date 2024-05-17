@@ -1,6 +1,7 @@
 import styled from "styled-components/macro";
 
 export const Wrapper = styled.header`
+    border-bottom: 0.3px solid rgba(0,0,0,0.18);
     height: 58px;
     width: 100%;
     display: flex;
@@ -43,11 +44,11 @@ export const LocationNavigators = styled.div`
     display: flex;
     justify-content: space-between;
     button {
+        background-color: white;
         width: 35px;
         height: 35px;
         border-radius: 50%;
         border: none;
-        background: rgba(0, 0, 0, 0.6);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -61,13 +62,14 @@ export const LocationNavigators = styled.div`
 `;
 
 export const UserNavigators = styled.div`
+    background-color: white;
     position: relative;
     margin-right: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 4px 6px;
-    width: 112px;
+    width: 180px;
     border-radius: 20px;
     transition: all 0.3s;
     svg {
@@ -76,11 +78,11 @@ export const UserNavigators = styled.div`
     }
     span {
         margin-left: -8px;
-        color: rgba(255, 255, 255, 0.9);
+        color: black;
     }
     &:hover {
         cursor: pointer;
-        background-color: rgba(179, 179, 179, 0.15);
+        background-color: rgba(176,175,175,0.3);
     }
 `;
 export const DisplayPicture = styled.div`

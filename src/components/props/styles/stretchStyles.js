@@ -6,9 +6,8 @@ width: auto;
 overflow: hidden;
 a {
     position: relative;
-    background: rgba(179, 179, 179, 0.15);
+    background: rgba(179,179,179,0.35);
     border-radius: 4px;
-    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.3);
     width: 100%;
     height: 100%;
     display: flex;
@@ -20,7 +19,6 @@ a {
         min-width: 78px;
         width: 100%;
         height: 100%;
-        box-shadow: 10px 0 24px rgba(0, 0, 0, 0.3);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -49,7 +47,7 @@ a {
             border-radius: 50%;
             border: none;
             opacity: 0;
-            background: rgba(29, 185, 84, 1);
+            background: black;
             transform: translateY(8px);
             transition: all 0.25s;
             animation-direction: alternate;
@@ -74,11 +72,10 @@ a {
         }
     }
     &:hover {
-        background: rgba(179, 179, 179, 0.35);
+        background: rgba(44,191,255,1);
         button {
                 opacity: 1;
                 transform: translateY(0px);
-                box-shadow: 0 8px 8px rgb(0, 0, 0, 0.3);
         }
     }
 }

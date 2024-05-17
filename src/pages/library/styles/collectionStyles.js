@@ -3,7 +3,6 @@ import styled from "styled-components"
 export const Wrapper = styled.div`
     width: 100%;
     max-height: calc(100vh - 90px);
-    background-image: linear-gradient(rgba(0,0,0,0.6) 0,#121212 100%);
     overflow-y: auto;
 `;
 
@@ -23,7 +22,7 @@ export const Container = styled.div`
     h3 {
         margin-left: 2px;
         font-size: 22px;
-        color: rgba(255, 255, 255, 0.9);
+        color: black;
     }
 `;
 
@@ -34,12 +33,12 @@ export const LibraryNav = styled.div`
     margin-bottom: 18px;
     margin-left: -2px;
         .active {
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(176,175,175,0.8);
             border-radius: 6px;
         }
         a {
             font-size: 16px;
-            color: rgba(255, 255, 255, 0.9);
+            color: black;
             text-decoration: none;
             padding:8px 24px;
         }

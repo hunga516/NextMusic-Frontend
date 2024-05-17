@@ -57,7 +57,6 @@ export default function PlayerFunctionality({ toggleDevice = false, setToggleDev
                     if (response.status === 204) {
                         setToggleDevice(false);
                     } else {
-                        setFlash('Opps, something went wrong!');
                     }
                 } catch (error) {
                     console.log(error)
@@ -78,7 +77,6 @@ export default function PlayerFunctionality({ toggleDevice = false, setToggleDev
                 if (response.status === 204) {
                     setVolume(ratio);
                 } else {
-                    setFlash('Opps, something went wrong!');
                 }
             } catch (error) {
                 console.log(error)
@@ -94,13 +92,13 @@ export default function PlayerFunctionality({ toggleDevice = false, setToggleDev
                 {toggleDevice && (
                     <DeviceOptions>
                         <div className="text">
-                            <h3>Connect to a device</h3>
+                            <h3>Kết nối thiết bị khác</h3>
                         </div>
                         <div className="banner">
-                            <img src='https://open.scdn.co/cdn/images/connect_header@1x.ecc6912d.png' alt="devices-png" draggable="false" />
+                            <img src='../img/device.png' alt="devices-png" draggable="false" />
                         </div>
                         <div className="devices">
-                            {devices && devices.length === 0 ? (<h3>No device available, or try to close and reopen this modal</h3>) : (
+                            {devices && devices.length === 0 ? (<h3>Không phát hiện thiết bị nào, hãy thử bật lại hộp thoại này</h3>) : (
                                 devices.map(items => (
                                     <div key={items.id} className="device_item" onClick={() => items.is_active === true ? null : switchDevice(items.id)}>
                                         <div className="icon">
@@ -108,11 +106,11 @@ export default function PlayerFunctionality({ toggleDevice = false, setToggleDev
                                         </div>
                                         <div className="informations">
                                             <div className="name">
-                                                <span style={{ color: items.is_active ? 'rgba(29, 185, 84, 0.9)' : 'rgba(255, 255, 255, 0.9)' }}>{items.is_active ? `Listening On` : `${items.name}`}</span>
+                                                <span style={{ color: items.is_active ? 'rgba(44,191,255,1)' : 'black' }}>{items.is_active ? `Đang phát` : `${items.name}`}</span>
                                             </div>
                                             <div className="device_status">
-                                                <VolumeIcon volume={1} style={{ stroke: items.is_active ? 'rgba(29, 185, 84, 0.9)' : 'rgba(179, 179, 179, 0.8)' }} />
-                                                <span style={{ color: items.is_active ? 'rgba(29, 185, 84, 0.9)' : 'rgba(179, 179, 179, 0.8)' }}>{items.is_active ? `${items.name}` : `Spotify Connect`}</span>
+                                                <VolumeIcon volume={1} style={{ stroke: items.is_active ? 'rgba(44,191,255,1)' : 'black' }} />
+                                                <span style={{ color: items.is_active ? 'rgba(44,191,255,1)' : 'black)' }}>{items.is_active ? `${items.name}` : `Đã ngắt kết nối`}</span>
                                             </div>
                                         </div>
                                     </div>

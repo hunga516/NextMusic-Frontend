@@ -60,7 +60,7 @@ export default function HomePage() {
                 <Top ref={topRef}>
                     {auth ? (
                         <>
-                            <h3>Good evening</h3>
+                            <h3>Chào buổi chiều</h3>
                             <TopInner style={{ gridTemplateColumns: dimensions.width < 1112 ? `repeat(${Math.ceil(dimensions.width / 392)}, minmax(0, 1fr)` : `repeat(4, minmax(0, 1fr)` }}>
                                 {items && typeof items !== 'undefined' && items.filter((item, index) => (dimensions.width < 1112 ? (index < Math.ceil(dimensions.width / 392)) : (index < 4))).map((item, index) => (
                                     <StretchFrame key={`my-playlist-${index}`} items={item} />

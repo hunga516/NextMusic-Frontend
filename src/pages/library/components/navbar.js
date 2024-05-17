@@ -7,10 +7,10 @@ export default function LibraryNavbar() {
     return (
         <LibraryNav>
             <NavLink to="/collection/playlists" activeClassName="active">
-                Playlists
+                Danh sách phát
             </NavLink>
             <NavLink to="/collection/artists" activeClassName="active">
-                Artists
+                Nghệ sĩ
             </NavLink>
             <NavLink to="/collection/albums" activeClassName="active">
                 Albums

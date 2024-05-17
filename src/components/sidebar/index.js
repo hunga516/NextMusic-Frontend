@@ -7,7 +7,7 @@ import { LoginContext, PlaylistContext } from '../../utils/context'
 // icons
 import { Logo, HomeIcon, SearchIcon, CollectionIcon, PlusIcon, HeartIcon } from '../../helpers/icons'
 // styled-components
-import { Wrapper, Container, Banner, NavItems, NavRoot, ClientInfo, CreatePlaylist, LikedSongs, SpotifyApp, UserPlaylists } from "./styles/sidebarStyles"
+import { Wrapper, Container, Banner, NavItems, NavRoot, ClientInfo, CreatePlaylist, LikedSongs, UserPlaylists } from "./styles/sidebarStyles"
 
 export default function Sidebar() {
     const auth = useContext(LoginContext);
@@ -29,7 +29,7 @@ export default function Sidebar() {
                         <NavLink draggable="false" to="/" exact={true} activeClassName="active">
                             <div className="nav_items">
                                 <HomeIcon />
-                                <span>Home</span>
+                                <span>Nghe ngay</span>
                             </div>
                         </NavLink>
                     </li>
@@ -37,7 +37,7 @@ export default function Sidebar() {
                         <NavLink draggable="false" to="/search" activeClassName="active">
                             <div className="nav_items">
                                 <SearchIcon />
-                                <span>Search</span>
+                                <span>Tìm kiếm</span>
                             </div>
                         </NavLink>
                     </li>
@@ -45,7 +45,7 @@ export default function Sidebar() {
                         <NavLink draggable="false" to="/collection/playlists" activeClassName="active">
                             <div className="nav_items">
                                 <CollectionIcon />
-                                <span>Your Library</span>
+                                <span>Thư viện của bạn</span>
                             </div>
                         </NavLink>
                     </li>
@@ -56,7 +56,7 @@ export default function Sidebar() {
                             <div className="rect">
                                 <PlusIcon />
                             </div>
-                            <span>Create Playlist</span>
+                            <span>Tạo danh sách phát</span>
                         </button>
                     </CreatePlaylist>
                     <LikedSongs>
@@ -65,7 +65,7 @@ export default function Sidebar() {
                                 <div className="rect">
                                     <HeartIcon />
                                 </div>
-                                <span>Liked Songs</span>
+                                <span>Bài hát yêu thích</span>
                             </NavLink>
                         </button>
                     </LikedSongs>
@@ -78,9 +78,6 @@ export default function Sidebar() {
                                     </div>
                                 ))}
                             </UserPlaylists>
-                            <SpotifyApp>
-                                <a draggable="false" target="_blank" rel="noreferrer noopener" href="https://open.spotify.com/download"><svg role="img" height="24" width="24" viewBox="0 0 24 24"><path d="M11.5 0C5.149 0 0 5.148 0 11.5 0 17.851 5.149 23 11.5 23S23 17.851 23 11.5C23 5.148 17.851 0 11.5 0zm0 22C5.71 22 1 17.29 1 11.5S5.71 1 11.5 1 22 5.71 22 11.5 17.29 22 11.5 22zm.499-6.842V5h-1v10.149l-3.418-3.975-.758.652 4.678 5.44 4.694-5.439-.757-.653-3.439 3.984z"></path></svg><span>Install App</span></a>
-                            </SpotifyApp>
                         </div>
                     )}
                 </NavRoot>

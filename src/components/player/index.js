@@ -51,10 +51,9 @@ function Player({ handleMaximize, isFullScreen }, ref) {
 
 
     const InitializePlayer = () => {
-        console.log("initializing firey spotify 👾");
         let { Player } = window.Spotify;
         fireyPlayer = new Player({
-            name: "Firey Spotify🔥",
+            name: "Next Music",
             getOAuthToken: (cb) => {
                 cb(spotifyToken);
             },
@@ -95,11 +94,9 @@ function Player({ handleMaximize, isFullScreen }, ref) {
         });
         // Ready
         fireyPlayer.addListener("ready", ({ device_id }) => {
-            console.log("Ready with Device ID", device_id);
         });
         // Not Ready
         fireyPlayer.addListener("not_ready", ({ device_id }) => {
-            console.log("Device ID has gone offline", device_id);
         });
         // Connect the player!
         fireyPlayer.connect()
@@ -130,9 +127,7 @@ function Player({ handleMaximize, isFullScreen }, ref) {
                         progress: progress_ms,
                     }))
                 } else if (response.status === 204) {
-                    setFlash('Please select a device to start listening on FIREY SPOTIFY 🔥');
                 } else {
-                    setFlash('Error from Spotify Server');
                 }
             } catch (error) {
                 console.log(error);
@@ -140,33 +135,6 @@ function Player({ handleMaximize, isFullScreen }, ref) {
         }
         getFunc();
     };
-
-    // playback func
-    // const playbackFunc = (ratio) => {
-    //     const playback_duration = ratio * playbackState.duration;
-    //     setPlaybackScrub(playback_duration);
-    // };
-
-    // seek position playback
-    // const seekPlaybackPosition = (ratio) => {
-    //     const position_ms = Math.round(ratio * playbackState.duration);
-    //     const requestFunc = updateWithToken(`https://api.spotify.com/v1/me/player/seek?position_ms=${position_ms}`, spotifyToken);
-    //     const seekPosition = async _ => {
-    //         try {
-    //             const response = await requestFunc();
-    //             if (response.status === 204) {
-    //                 setPostionPb(ratio);
-    //                 setPostionPb(state => ({ ...state, progress: position_ms }));
-    //                 updateState();
-    //             }
-    //         } catch (error) {
-    //             console.log(error)
-    //         }
-    //     };
-
-    //     seekPosition();
-    //     setPlaybackScrub(null);
-    // };
 
     // play / resume, pause track
     const toggleMusic = _ => {
@@ -178,7 +146,7 @@ function Player({ handleMaximize, isFullScreen }, ref) {
                     setPlaybackState(state => ({ ...state, play: !state.play }))
                     updateState();
                 } else {
-                    setFlash('Opps, something went wrong!');
+                    setFlash('Bạn chưa chọn thiết bị phát');
                     return;
                 }
             } catch (error) {
@@ -197,9 +165,8 @@ function Player({ handleMaximize, isFullScreen }, ref) {
                 const response = await request();
                 if (response.status === 204) {
                     setPlaybackState(state => ({ ...state, shuffle: !state.shuffle }));
-                    setFlash(`Shuffle ${playbackState.shuffle ? "disabled" : "enabled"}`);
+                    setFlash(`Trộn bài ${playbackState.shuffle ? "đã tắt" : "đang bật"}`);
                 } else {
-                    setFlash('Opps, something went wrong!');
                     return;
                 }
             } catch (error) {
@@ -217,7 +184,7 @@ function Player({ handleMaximize, isFullScreen }, ref) {
             try {
                 const response = await request();
                 if (response.status !== 204) {
-                    setFlash('Opps, something went wrong!');
+                    setFlash('Bạn thao tác quá nhanh, vui lòng F5 lại trang!');
                     return;
                 };
             } catch (error) {
@@ -235,7 +202,7 @@ function Player({ handleMaximize, isFullScreen }, ref) {
             try {
                 const response = await request();
                 if (response.status !== 204) {
-                    setFlash('Opps, something went wrong!');
+                    setFlash('Bạn thao tác quá nhanh, vui lòng F5 lại trang!');
                     return;
                 };
             } catch (error) {
@@ -254,9 +221,9 @@ function Player({ handleMaximize, isFullScreen }, ref) {
                 const response = await request();
                 if (response.status === 204) {
                     setPlaybackState(state => ({ ...state, repeat: !state.repeat }));
-                    setFlash(`Repeat mode ${playbackState.repeat ? "disabled" : "enabled"}`);
+                    setFlash(`Phát lặp lại ${playbackState.repeat ? "đã tắt" : "đang được bật"}`);
                 } else {
-                    setFlash('Opps, something went wrong!');
+                    setFlash('Bạn thao tác quá nhanh, vui lòng F5 lại trang!');
                     return;
                 }
             } catch (error) {
@@ -313,19 +280,6 @@ function Player({ handleMaximize, isFullScreen }, ref) {
                             </button>
                         </div>
                     </div>
-                    {/* <div className="player_progress_bar">
-                        <div className="duration">
-                            {playbackScrub ? minutesAndSeconds(playbackScrub) : minutesAndSeconds(playbackState.progress)}
-                        </div>
-                        <Progressbar
-                            value={positionPb}
-                            setValue={(ratio) => seekPlaybackPosition(ratio)}
-                            func={playbackFunc}
-                        />
-                        <div className="duration">
-                            {minutesAndSeconds(playbackState.duration)}
-                        </div>
-                    </div> */}
                 </AudioPlayer>
                 <PlayerControl>
                     <PlayerFunctionality

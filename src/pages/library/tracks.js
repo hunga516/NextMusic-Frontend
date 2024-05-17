@@ -46,7 +46,6 @@ export default function CollectionTracks() {
                             })))
                             setLoading(false);
                         } else {
-                            setFlash('Opps, something went wrong!');
                         }
                     }
                 } catch (error) {

@@ -71,7 +71,7 @@ export default function CollectionArtists() {
                             description={(album.description).join(", ")}
                             uri={album.uri}
                         />
-                    )) : (<h4>You haven't liked any albums yet, start listening to your fav ones soon.</h4>)}
+                    )) : (<h4>Có vẻ như bạn chưa có album nào, tiếp tục nghe để có thể nhận gợi ý về album mới dành riêng cho bạn.</h4>)}
                 </FrameWrapper>
             </Container>
         </Wrapper>

@@ -12,7 +12,7 @@ import { ChevronDownIcon, ChevronLeft, ChevronRight } from "../../helpers/icons"
 // styled-components
 import { Wrapper, LocationNavigators, Navigations, UserNavigators, DisplayPicture } from "./styles/headerStyles";
 
-export default function Header({ bg = 'transperant', position = 'relative' }) {
+export default function Header({ bg = 'white', position = 'relative' }) {
     const history = useHistory();
     const menuRef = useRef(null);
     const [toggle, setToggle] = useState(false);
@@ -48,7 +48,6 @@ export default function Header({ bg = 'transperant', position = 'relative' }) {
                         {Object.keys(user).length !== 0 && <img src={user.images && user.images[0].url} alt='user-dp' />}
                     </DisplayPicture>
                     <span>{user && user.display_name}</span>
-                    <ChevronDownIcon />
                     {toggle && (<UserMenu userID={user && user.id} country={user && user.country} />)}
                 </UserNavigators>
             ) : (

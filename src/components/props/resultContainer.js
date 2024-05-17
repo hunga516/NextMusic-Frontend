@@ -39,7 +39,6 @@ export default function ResultContainer({ title, value, type, limit = 6, add = f
             if (response.status === 204) {
                 setTimeout(() => updatePlayer(), 200);
             } else {
-                setFlash('Opps, something went wrong!');
             }
         };
         requestMusic();
@@ -109,7 +108,7 @@ export default function ResultContainer({ title, value, type, limit = 6, add = f
 
     return (
         <Container>
-            {resultItems.length !== 0 && <h1>{title}</h1>}
+            {resultItems.length !== 0 && <h1 style={{color: "black"}}>{title}</h1>}
             {type === "track" ? (
                 <div className="type_grid">
                     {resultItems.map((item, index) => (
@@ -122,7 +121,7 @@ export default function ResultContainer({ title, value, type, limit = 6, add = f
                                     </div>
                                 </div>
                                 <div className="dets">
-                                    <h3>{item.name}</h3>
+                                    <h3 style={{color: "black"}}>{item.name}</h3>
                                     <span>{item.artists.map(item => item).join(', ')}</span>
                                 </div>
                             </div>

@@ -43,7 +43,6 @@ export const GenreWrapper = styled.div`
 export const Wrapper = styled.div`
     width: 100%;
     max-height: calc(100vh - 90px);
-    background-image: linear-gradient(rgba(0,0,0,0.6) 0,#121212 100%);
     overflow-y: auto;
 `;
 
@@ -63,17 +62,22 @@ export const SearchBar = styled.div`
         top: 10px;
         left: 12px;
         svg {
-            color: rgba(0, 0, 0, 0.8);
+            color: black;
         }
     }
     input {
-        border-radius: 20px;
-        text-indent: 42px;
+        border-top: 0.3px solid rgba(0,0,0,0.18);
+        border-left: 0.3px solid rgba(0,0,0,0.18); 
+        border-right: 0.3px solid rgba(0,0,0,0.18); 
+        border-radius: 5px;
+        text-indent: 20px;
         font-family: "Poppins", sans-serif;
         font-weight: 500;
-        border: none;
         outline: none;
         width: 100%;
         height: 100%;
+        &:focus {
+        border-bottom: 3px solid #2cbfff; 
+        }
     }
 `;

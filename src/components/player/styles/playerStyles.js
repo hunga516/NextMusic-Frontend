@@ -7,11 +7,12 @@ export const Wrapper = styled.footer`
 `;
 
 export const Container = styled.div`
+    border-top: 0.3px solid rgba(0, 0, 0, 0.18);
+    float: right;
     height: 90px;
-    width: 100%;
+    width: 86.5%;
     padding: 12px 16px;
-    background: #181818;
-    border-top: 1px solid #282828;
+    background: white;
     user-select: none;
     display: flex;
     align-items: center;
@@ -25,8 +26,11 @@ export const PlayerStatus = styled.div`
     display: flex;
 `;
 export const AudioPlayer = styled.div`
-    width: 100%;
-    height: 100%;
+    border: 1px solid rgba(226,225,225,1);
+    border-radius: 4px;
+    background-color: rgba(226,225,225,1);
+    width: 65%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,7 +56,7 @@ export const AudioPlayer = styled.div`
                 border: none;
                 svg {
                     transition: all 0.15s;
-                    fill: rgba(179, 179, 179, 1);
+                    fill: black;
                 }
                 &:hover {
                     svg {
@@ -61,15 +65,14 @@ export const AudioPlayer = styled.div`
                 }
         }
         .player_play_controls {
-            width: 33px;
-            height: 33px;
-            border-radius: 50%;
-            margin: 0 4px;
+            width: 38px;
+            height: 37px;
+            border-radius: 49%;
+            margin: 0 30px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: rgba(255, 255, 255, 1);
-            box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.5);
             button {
                 margin: 4px 0 0 0;
                 svg {

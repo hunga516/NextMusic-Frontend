@@ -16,5 +16,4 @@ export const SectionWrapper = styled.div`
 display: grid;
 width: 100%;
 height: 100%;
-column-gap: 24px;
 `;

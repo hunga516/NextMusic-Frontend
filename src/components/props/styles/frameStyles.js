@@ -1,20 +1,17 @@
 import styled from "styled-components/macro"
 
 export const Container = styled.div`
-    height: 272px;
+    height: 82%;
     width: auto;
-    background: rgba(24, 24, 24, 1);
     border-radius: 4px;
-    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.3);
-    transition: all 0.25s;
     a {
         text-decoration: none;
         width: 100%;
         height: 100%;
         cursor: pointer;
         .poster {
-            height: 70%;
-            padding: 16px;
+            height: 92%;
+            padding: 8px;
             position: relative;
             text-align: center;
             h1 {
@@ -29,7 +26,7 @@ export const Container = styled.div`
                 bottom: 24px;
                 right: 24px;
                 opacity: 0;
-                background: rgba(29, 185, 84, 1);
+                background: black;
                 transform: translateY(8px);
                 transition: all 0.25s;
                 animation-direction: alternate;
@@ -46,18 +43,18 @@ export const Container = styled.div`
                 }
             }
             img {
-                box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
-                border-radius: 2px;
+                border-radius: 6px;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
         }
         .meta {
-            padding: 0 16px 16px 16px;
+            padding: 0 16px 16px 8px;
             h3 {
+                padding: 6px 0px;
                 font-size: 16px !important;
-                color: rgba(255, 255, 255, 0.9);
+                color: black;
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
@@ -75,13 +72,17 @@ export const Container = styled.div`
         }
     }
     &:hover {
-        background: rgba(179, 179, 179, 0.18);
+        background: rgba(44,191,255,1);
         .poster {
             button {
                 opacity: 1;
                 transform: translateY(0px);
                 box-shadow: 0 8px 8px rgb(0, 0, 0, 0.3);
             }
+        }
+        .meta{
+            background: rgba(44,191,255,1);
+            border-radius: 4px;
         }
     }
 `;
